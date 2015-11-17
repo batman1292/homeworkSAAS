@@ -1,4 +1,5 @@
 HomeworkSAAS::Application.routes.draw do
+  get 'movies' => 'movies#index'
   resources :movies
   root :to => redirect('/movies')
   # The priority is based upon order of creation:
