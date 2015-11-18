@@ -2,6 +2,7 @@ HomeworkSAAS::Application.routes.draw do
   resources :movies
   root :to => redirect('/movies')
   #get 'movies' => 'movies#index'
+  get 'movies/new' => 'movies#new'
   get 'movies/:id' => 'movies#show'
   post 'movies' => 'movies#create'
   put 'movies/:id' => 'movies#update'
