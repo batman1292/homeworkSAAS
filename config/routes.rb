@@ -1,8 +1,12 @@
 HomeworkSAAS::Application.routes.draw do
   resources :movies
   root :to => redirect('/movies')
-  get 'movies' => 'movies#index'
+  #get 'movies' => 'movies#index'
   get 'movies/:id' => 'movies#show'
+  post 'movies' => 'movies#create'
+  put 'movies/:id' => 'movies#update'
+  get 'movies/:id/edit' => 'movies#edit'
+  delete 'movies/:id' => 'movies#destroy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
