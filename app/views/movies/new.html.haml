@@ -5,3 +5,6 @@
 = form_tag '/movies', :method => :post do
   = render :partial => 'movie_form'
   = submit_tag 'Save Changes'
+  = link_to 'Cancel', movies_path   # cancel link
+  = label :movie, :description, 'Description'
+  = text_field :movie, 'description'
