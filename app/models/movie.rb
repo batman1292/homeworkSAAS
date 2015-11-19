@@ -21,4 +21,5 @@ class Movie < ActiveRecord::Base
     self.title = self.title.split(/\s+/).map(&:downcase).
       map(&:capitalize).join(' ')
   end
+
 end
