@@ -11,10 +11,11 @@ HomeworkSAAS::Application.routes.draw do
 
   get 'movies/:order/order' => 'movies#index', :as => 'order_movie'
 
-  get 'auth/twitter', :as => 'login'
+  get 'auth/facebook', :as => 'login'
   match  'auth/:provider/callback' => 'sessions#create'
   match 'logout' => 'sessions#destroy'
   match  'auth/failure' => 'sessions#failure'
+  get 'sessions/logout' => 'sessions#logout', :as => 'logout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,10 +1,22 @@
 -# new.html.haml using partial
-
-%h2 Create New Movie
-
-= form_tag '/movies', :method => :post do
-  = render :partial => 'movie_form'
-  = submit_tag 'Save Changes'
-  = link_to 'Cancel', movies_path   # cancel link
-  = label :movie, :description, 'Description'
-  = text_field :movie, 'description'
+%div.row
+  %div.col-xs-8.col-xs-offset-2
+    %div.row
+      %div.col-xs-4
+        %h2 Create New Movie
+    %div.row
+    = form_tag '/movies', :class=>'form-control', :method => :post do
+      %div.col-xs-12
+        = render :partial => 'movie_form'
+        %br
+        %div.row
+          %div.col-xs-3.col-xs-offset-3
+            = label :movie, :description, 'Description'
+          %div.col-xs-6
+            = text_field :movie, 'description'
+        %br
+        %div.row
+          %div.col-xs-2.col-xs-offset-8
+            = submit_tag 'Save Changes', :class=>"btn btn-success"
+          %div.col-xs-2
+            = link_to 'Cancel', movies_path, :class=>"btn btn-danger"   # cancel link

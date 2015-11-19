@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
-
+gem 'omniauth-facebook'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -28,7 +28,7 @@ group :development, :test do
   gem 'debugger'
 end
 
-gem 'omniauth-twitter'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
