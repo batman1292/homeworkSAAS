@@ -1,6 +1,6 @@
 HomeworkSAAS::Application.routes.draw do
   resources :movies
-  root :to => redirect('/movies')
+  root :to => redirect('/sessions/logout')
   #get 'movies' => 'movies#index'
   get 'movies/new' => 'movies#new'
   get 'movies/:id' => 'movies#show'
