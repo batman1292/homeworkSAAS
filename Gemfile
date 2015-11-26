@@ -6,7 +6,12 @@ gem 'omniauth-facebook'
 gem "heroku"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+ruby '1.9.3'
+group :development do
+  gem 'sqlite3'
+end
 
+<<<<<<< HEAD
 group :development, :test do
   gem 'sqlite3'
 end
@@ -15,6 +20,12 @@ group :production do
   gem 'rails_12factor'  # Heroku-specific production settings
 end
 
+=======
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+>>>>>>> afba7759208be15b74c8b66e8c62012525b5a031
 
 # Gems used only for assets and not required
 # in production environments by default.

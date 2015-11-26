@@ -1,19 +1,24 @@
 -# in app/views/movies/show.html.haml
+%div.row
+  %div.col-xs-8.col-xs-offset-2
+    %fieldset
+      %legend Details about #{@movie.title}
 
-%h2 Details about #{@movie.title}
+      %ul#details
+        %li
+          Rating:
+          = @movie.rating
+        %li
+          Released on:
+          = @movie.release_date.strftime("%B %d, %Y")
 
-%ul#details
-  %li
-    Rating:
-    = @movie.rating
-  %li
-    Released on:
-    = @movie.release_date.strftime("%B %d, %Y")
-
-%h3 Description:
-%p#description= @movie.description
-
-= link_to 'Edit info', edit_movie_path(@movie)
--# This Delete link will not really be a link, but a form:
-= link_to 'Delete', movie_path(@movie), :method => :delete
-= link_to 'Back to movie list', movies_path
+      %h3 Description:
+      %p#description= @movie.description
+      %div.row
+        %div.col-xs-2.col-xs-offset-2
+          = link_to ' Edit info', edit_movie_path(@movie), :class=>'btn btn-info glyphicon glyphicon-pencil'
+        %div.col-xs-2
+          -# This Delete link will not really be a link, but a form:
+          = link_to ' Delete', movie_path(@movie), :method => :delete, :class=>'btn btn-warning glyphicon glyphicon-trash'
+        %div.col-xs-2
+          = link_to ' Back to movie list', movies_path, :class=>'btn btn-danger glyphicon glyphicon-chevron-left'

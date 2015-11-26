@@ -5,7 +5,7 @@
       %div.col-xs-4
         %h1 All Movies
       %div.col-xs-3.col-xs-offset-5
-        = link_to 'Add new movie', new_movie_path, :class=>"btn btn-primary glyphicon glyphicon-plus", :style=>"margin-top:20px"
+        = link_to ' Add new movie', new_movie_path, :class=>"btn btn-success glyphicon glyphicon-plus", :style=>"margin-top:20px"
     %div.row
       %div.col-xs-12
         %table.table-striped.table
@@ -21,7 +21,7 @@
               %td= movie.title
               %td= movie.rating
               %td= movie.release_date
-              %td= link_to "More about #{movie.title}", movie_path(movie), :class=>"glyphicon glyphicon-pencil"
+              %td= link_to " More about #{movie.title}", movie_path(movie), :class=>"glyphicon glyphicon-pencil"
 
 
 

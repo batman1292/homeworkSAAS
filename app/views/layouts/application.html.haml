@@ -7,6 +7,7 @@
     = csrf_meta_tags
 
   %body
+<<<<<<< HEAD
 
     = render :partial => 'sessions/login_form'
     = yield
@@ -15,3 +16,18 @@
       #notice.message= flash[:notice]
     - elsif flash[:warning]
       #warning.message= flash[:warning]
+=======
+    %br
+    %div.row
+      %div.col-xs-4.col-xs-offset-8
+        = render :partial => 'sessions/login_form'
+    %br
+    %div.row
+      %div.col-xs-12
+        = yield
+        -# this goes just inside %body:
+        - if flash[:notice]
+          #notice.message= flash[:notice]
+        - elsif flash[:warning]
+          #warning.message= flash[:warning]
+>>>>>>> afba7759208be15b74c8b66e8c62012525b5a031
