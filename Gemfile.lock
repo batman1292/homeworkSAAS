@@ -102,7 +102,6 @@ GEM
       omniauth (~> 1.2)
     pg (0.18.4)
     polyglot (0.3.5)
-    puma (2.15.3)
     rack (1.4.7)
     rack-cache (1.5.1)
       rack (>= 0.4)
@@ -169,7 +168,6 @@ DEPENDENCIES
   jquery-rails
   omniauth-facebook
   pg
-  puma
   rails (= 3.2.18)
   rails_12factor
   sass-rails (~> 3.2.3)
