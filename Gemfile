@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '1.9.3'
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.18'
 gem 'omniauth-facebook'
 gem "heroku"
 # Bundle edge Rails instead:
@@ -12,13 +12,8 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  gem 'rails_12factor'  # Heroku-specific production settings
 end
-
-group :production do
-  gem 'thin'
-end
-
-gem 'rails_12factor', group: :production
 
 
 # Gems used only for assets and not required
