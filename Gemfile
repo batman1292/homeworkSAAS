@@ -4,7 +4,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.18'
 gem 'omniauth-facebook'
 gem 'heroku'
-gem 'puma'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git
 
