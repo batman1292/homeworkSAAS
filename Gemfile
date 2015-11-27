@@ -8,7 +8,7 @@ ruby '1.9.3'
 group :development do
   gem 'sqlite3'
 end
-group :production do
+group :test, :production do
   gem 'pg'
   gem 'rails_12factor'
 end
