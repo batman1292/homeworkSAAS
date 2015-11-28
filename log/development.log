@@ -34047,3 +34047,9 @@ Served asset /application.self.js - 304 Not Modified (1ms)
 
 Started GET "/assets/sessions.self.js?body=1" for 127.0.0.1 at 2015-11-20 00:04:48 +0700
 Served asset /sessions.self.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20151117082907)
+Migrating to CreateMoviegoers (20151119073232)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
