@@ -37644,3 +37644,77 @@ OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `co
   Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 16:48:59 +0700
+Connecting to database specified by database.yml
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-12 16:49:00 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (53.8ms)
+  Rendered sessions/_login_form.html.haml (6.9ms)
+Completed 200 OK in 187.8ms (Views: 187.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 16:49:01 +0700
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 16:49:01 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-12 16:49:01 +0700
+Served asset /movies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-12 16:49:01 +0700
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-01-12 16:49:02 +0700
+
+
+Started GET "/auth/facebook/callback?code=AQD1ZTP59EVRPBYXeTF3DGOmKZWuNbX2oWkrSkoCnuX9gTeUdLJDRdKXGxmdvNGged5rpLnGCPn2HWVTfliXIFWJ-JMyOUDKtbzOjPNWgsHKm2NQFhE4LKnHrpgs25v-q9eQAESy0ANzr8HU9OLYQaUUNgsdkRtHDOJy6aV2p_tyMy4FKiJXM5kwiVqYcvpBAIbVsO-3AVMs7U0QDn63wa6oytiOBKmouQvw94LG9W2prUoiTH1Yj1z8CQI3Z_R8ofXgJV3rR-4b5snmWhYBl5UKfTKxesgESkeNkd98tH0pSlW-5ZA2ZlQFoqq4o6NMfZfzEUwi3skbiXKJHQKRjSGm&state=602f2679bc4f7ce0c1c6c7a3cd636ef4599e11ff95962ec4" for 127.0.0.1 at 2016-01-12 16:49:03 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD1ZTP59EVRPBYXeTF3DGOmKZWuNbX2oWkrSkoCnuX9gTeUdLJDRdKXGxmdvNGged5rpLnGCPn2HWVTfliXIFWJ-JMyOUDKtbzOjPNWgsHKm2NQFhE4LKnHrpgs25v-q9eQAESy0ANzr8HU9OLYQaUUNgsdkRtHDOJy6aV2p_tyMy4FKiJXM5kwiVqYcvpBAIbVsO-3AVMs7U0QDn63wa6oytiOBKmouQvw94LG9W2prUoiTH1Yj1z8CQI3Z_R8ofXgJV3rR-4b5snmWhYBl5UKfTKxesgESkeNkd98tH0pSlW-5ZA2ZlQFoqq4o6NMfZfzEUwi3skbiXKJHQKRjSGm", "state"=>"602f2679bc4f7ce0c1c6c7a3cd636ef4599e11ff95962ec4", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 124.1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'moviegoers'):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 16:51:51 +0700
+Connecting to database specified by database.yml
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-12 16:51:52 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (66.9ms)
+  Rendered sessions/_login_form.html.haml (2.0ms)
+Completed 200 OK in 177.5ms (Views: 177.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 16:51:53 +0700
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-12 16:51:53 +0700
+Served asset /sessions.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-12 16:51:53 +0700
+Served asset /movies.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 16:51:53 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-01-12 16:51:56 +0700
