@@ -5,8 +5,13 @@ gem 'rails', '3.2.18'
 gem 'omniauth-facebook'
 gem 'heroku'
 
+gem 'themoviedb'
+
 # add to end of Gemfile
 group :test, :development do
+  gem 'rspec-rails'
+  gem 'ZenTest', '4.11'
+  gem 'autotest-rails'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
   gem 'database_cleaner' # to clear Cucumber's test database between runs
