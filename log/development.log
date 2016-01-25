@@ -41597,3 +41597,732 @@ Connecting to database specified by database.yml
   [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (5.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151119073232')
   [1m[36m (6.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151117082907')[0m
+Connecting to database specified by database.yml
+  [1m[36m (8.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (133.1ms)[0m  [1mCREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (3.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (4.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151119073232')
+  [1m[36m (3.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151117082907')[0m
+Connecting to database specified by database.yml
+  [1m[36m (6.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (17.3ms)[0m  [1mCREATE TABLE "moviegoers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "provider" varchar(255), "uid" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (3.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151119073232')
+  [1m[36m (3.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151117082907')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-24 23:09:59 +0700
+Connecting to database specified by database.yml
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-24 23:10:00 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (12.0ms)
+  Rendered sessions/_login_form.html.haml (3.3ms)
+Completed 200 OK in 337.8ms (Views: 337.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:01 +0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:01 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:01 +0700
+Served asset /movies.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:01 +0700
+Served asset /sessions.js - 304 Not Modified (4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-01-24 23:10:03 +0700
+
+
+Started GET "/auth/facebook/callback?code=AQAQdrgtASZH15f_VEAmQlAVyq5sc7MbvZloj3i0ysczLLsNV6ClzSGZBoZrggGg0CCrvkw50eV6BJ4BUSTgLs9Burlf4guM0WsPcpPUzj6tPE2FgKFgnQzsSOMUWtbl7t3d1bP6JjowjX34wUpvePeI2HQRp2RiNd5QBsQPCsHzp3bSumW4q7PK9fYsyKTPl0t_5SewTQI5taO15vbuEcYA2GsXd_pGHYp8LkTM4I1VC8oT-srZ0dFU3EeODqFNryq4O8FS3GipJIv_peLcPCYeaGm4539izmAlNfJ7Jd1WDkGcBiou4THPhgxKgQhVtFkWNHytMMpxEh2intMbwB6X&state=03a87499b635a2f59e4fce0c27778cd1827118439b445f81" for 127.0.0.1 at 2016-01-24 23:10:04 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAQdrgtASZH15f_VEAmQlAVyq5sc7MbvZloj3i0ysczLLsNV6ClzSGZBoZrggGg0CCrvkw50eV6BJ4BUSTgLs9Burlf4guM0WsPcpPUzj6tPE2FgKFgnQzsSOMUWtbl7t3d1bP6JjowjX34wUpvePeI2HQRp2RiNd5QBsQPCsHzp3bSumW4q7PK9fYsyKTPl0t_5SewTQI5taO15vbuEcYA2GsXd_pGHYp8LkTM4I1VC8oT-srZ0dFU3EeODqFNryq4O8FS3GipJIv_peLcPCYeaGm4539izmAlNfJ7Jd1WDkGcBiou4THPhgxKgQhVtFkWNHytMMpxEh2intMbwB6X", "state"=>"03a87499b635a2f59e4fce0c27778cd1827118439b445f81", "provider"=>"facebook"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."provider" = 'facebook' AND "moviegoers"."uid" = '1008865265823002' LIMIT 1[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 221.7ms (ActiveRecord: 67.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-24 23:10:05 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (31.4ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 84.8ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:06 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:10:06 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-24 23:21:39 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (0.1ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 12.4ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:39 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:39 +0700
+Served asset /movies.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:39 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:39 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-01-24 23:21:43 +0700
+
+
+Started GET "/auth/facebook/callback?code=AQCrL2i72Eh0P2zC56uH-7b_S93m-vbsbJPrXoVF5u2Uyf4IsuZmzahlxq4qSdO35NcI6Du6j9p0VINfCf-bqFkZVab7RUyOvQNCCBWAhdhSaTcc1hUKQUrPPX4GvGP5cyLoId-opgDvCGrE9X20m_vauc4l2G3M_PbAAt3rLtd5n8zFnvShRQ9UH1FkwJ-4MFt-KX3iV3vY9pbZ36Z8fLCUlxJoiLDnuJ6EYMoeqEpAvQerdmC552CajT6QJ49bBjRR0I6NdGaOe1ZIvIpuQN2y0REqiZjDoXuyAxgfzv3oJv0lCUE2_k_xvdaqjEl7LZ27qc2a982XL-68L572Ofm4&state=a8c56a7e5e76aae8a90a4b3aa010a37c631d533b275ad1e4" for 127.0.0.1 at 2016-01-24 23:21:44 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCrL2i72Eh0P2zC56uH-7b_S93m-vbsbJPrXoVF5u2Uyf4IsuZmzahlxq4qSdO35NcI6Du6j9p0VINfCf-bqFkZVab7RUyOvQNCCBWAhdhSaTcc1hUKQUrPPX4GvGP5cyLoId-opgDvCGrE9X20m_vauc4l2G3M_PbAAt3rLtd5n8zFnvShRQ9UH1FkwJ-4MFt-KX3iV3vY9pbZ36Z8fLCUlxJoiLDnuJ6EYMoeqEpAvQerdmC552CajT6QJ49bBjRR0I6NdGaOe1ZIvIpuQN2y0REqiZjDoXuyAxgfzv3oJv0lCUE2_k_xvdaqjEl7LZ27qc2a982XL-68L572Ofm4", "state"=>"a8c56a7e5e76aae8a90a4b3aa010a37c631d533b275ad1e4", "provider"=>"facebook"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."provider" = 'facebook' AND "moviegoers"."uid" = '1008865265823002' LIMIT 1
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 1.4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-24 23:21:45 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (12.6ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 24.1ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:45 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:45 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:45 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:21:45 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-24 23:42:45 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (0.1ms)
+  Rendered sessions/_login_form.html.haml (0.4ms)
+Completed 200 OK in 14.0ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:42:45 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:42:45 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:42:45 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:42:45 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-24 23:54:31 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-24 23:54:31 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (11.2ms)
+  Rendered sessions/_login_form.html.haml (0.4ms)
+Completed 200 OK in 69.5ms (Views: 22.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:31 +0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:31 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:31 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:31 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-24 23:54:35 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (5.6ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (6.8ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 30.9ms (Views: 23.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:35 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:35 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:35 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:54:35 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-24 23:56:56 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (0.1ms)
+  Rendered sessions/_login_form.html.haml (0.4ms)
+Completed 200 OK in 10.5ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-24 23:56:56 +0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-24 23:56:56 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-24 23:56:56 +0700
+Served asset /movies.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-24 23:56:56 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-01-24 23:56:57 +0700
+
+
+Started GET "/auth/facebook/callback?code=AQDTSHqlufoXHGjs9-usWbHkq6vZsoa37qV249agpPa9ofxj1OkkaFganhQWy6IB7yQDMWr-z6iVFLPyuEkIw_6DCO_Etv0z5MyrJMzRVNrZbbmv8DlqP6eoJhUIxkV3oSD416ux1pItgnnzTLFRqGbU9cvpZmWOUv4OY04DGieHkSXirX8bFmZbY0WWgRkA3YmE0IR59k9RFAZNIvzEOJCi7YGqvR8MUpiyPQodZnI6YBKemVXIQGE6wVrmi3xHNOdq1mFnNxbMZaAc6U0PEqDNQXRkWxCByO2oo8rdtvEyexYImYz9BDTiCTqO9dLgVHmt5Vw4e0Twy0Og2tabnzn6&state=6fd8a3d0ec47445ae57403cb6a3f21dd6466848b37f04222" for 127.0.0.1 at 2016-01-24 23:56:57 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDTSHqlufoXHGjs9-usWbHkq6vZsoa37qV249agpPa9ofxj1OkkaFganhQWy6IB7yQDMWr-z6iVFLPyuEkIw_6DCO_Etv0z5MyrJMzRVNrZbbmv8DlqP6eoJhUIxkV3oSD416ux1pItgnnzTLFRqGbU9cvpZmWOUv4OY04DGieHkSXirX8bFmZbY0WWgRkA3YmE0IR59k9RFAZNIvzEOJCi7YGqvR8MUpiyPQodZnI6YBKemVXIQGE6wVrmi3xHNOdq1mFnNxbMZaAc6U0PEqDNQXRkWxCByO2oo8rdtvEyexYImYz9BDTiCTqO9dLgVHmt5Vw4e0Twy0Og2tabnzn6", "state"=>"6fd8a3d0ec47445ae57403cb6a3f21dd6466848b37f04222", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 0.9ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:18:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-01-25 00:03:07 +0700
+
+
+Started GET "/auth/facebook/callback?code=AQB79PdgtfJXS4C5VQaetdLE5BhIyRKJThg_wNyGfYqI0PPYmWO0STq49KI67GSZGbHTes8zxiuxZTZUbGRR84KsHsRWGAL0JuTWf5qCbI-jU1NeV8pWvYkOsY5PIlspDOMB46jRV5r8dFqoi5CugUx1HDUCOm9C601uKeG07Vgn0Fzy4pKLPwkjv2ABnZy-HqnK23RWVb6eomiOmpqdqkxwCavU56q0n2nMUaXo61xHiBj3GcBfkGzAjha2c8dJP-q4gcfOAWXeQX_ymBXrOT_qljru8PQOXh3P32fz8_x9tViFnEpfjwavRGfoxT4XTJm6ulfVMiQWd2r4BBWRz2hk&state=bf494d326d474009128dc488459d7f68ef0eca66b869ca38" for 127.0.0.1 at 2016-01-25 00:03:08 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB79PdgtfJXS4C5VQaetdLE5BhIyRKJThg_wNyGfYqI0PPYmWO0STq49KI67GSZGbHTes8zxiuxZTZUbGRR84KsHsRWGAL0JuTWf5qCbI-jU1NeV8pWvYkOsY5PIlspDOMB46jRV5r8dFqoi5CugUx1HDUCOm9C601uKeG07Vgn0Fzy4pKLPwkjv2ABnZy-HqnK23RWVb6eomiOmpqdqkxwCavU56q0n2nMUaXo61xHiBj3GcBfkGzAjha2c8dJP-q4gcfOAWXeQX_ymBXrOT_qljru8PQOXh3P32fz8_x9tViFnEpfjwavRGfoxT4XTJm6ulfVMiQWd2r4BBWRz2hk", "state"=>"bf494d326d474009128dc488459d7f68ef0eca66b869ca38", "provider"=>"facebook"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."provider" = 'facebook' AND "moviegoers"."uid" = '1008865265823002' LIMIT 1[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 18.5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 00:03:09 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (4.4ms)
+  Rendered sessions/_login_form.html.haml (0.6ms)
+Completed 200 OK in 51.5ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 00:03:09 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 00:03:09 +0700
+Served asset /movies.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 00:03:09 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 00:03:09 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2016-01-25 00:05:40 +0700
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.haml within layouts/application (0.1ms)
+  Rendered sessions/_login_form.html.haml (0.4ms)
+Completed 200 OK in 10.9ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 00:05:41 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 00:05:41 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 00:05:41 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 00:05:41 +0700
+Served asset /sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-25 11:16:32 +0700
+Connecting to database specified by database.yml
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:16:33 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (92.5ms)
+  Rendered sessions/_login_form.html.haml (2.4ms)
+Completed 200 OK in 727.7ms (Views: 478.3ms | ActiveRecord: 71.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:16:34 +0700
+Served asset /jquery.js - 304 Not Modified (66ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:16:34 +0700
+Served asset /movies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:16:34 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:16:34 +0700
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:17:22 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (7.9ms)
+  Rendered sessions/_login_form.html.haml (140.0ms)
+Completed 500 Internal Server Error in 200.9ms
+
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<#<Class:0xb5f06d14>:0xb5f05720>):
+    1: #login
+    2: - if @current_user
+    3:   %h4.welcome  Welcome, #{@current_user.name}!
+    4:   = link_to ' Log Out', logout_path, :class=>"btn btn-danger glyphicon glyphicon-minus"
+    5: - else
+    6:   %p.login= link_to ' Log in with your Facebook account', login_path, :class=>"btn btn-primary"
+  app/views/sessions/_login_form.html.haml:4:in `_app_views_sessions__login_form_html_haml__800231983__623104368'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__623608228'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:17:49 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (7.6ms)
+  Rendered sessions/_login_form.html.haml (94.6ms)
+Completed 500 Internal Server Error in 163.3ms
+
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<#<Class:0xb5974dd8>:0xb5988a7c>):
+    1: #login
+    2: - if @current_user
+    3:   %h4.welcome  Welcome, #{@current_user.name}!
+    4:   = link_to ' Log Out', logout_path, :class=>"btn btn-danger glyphicon glyphicon-minus"
+    5: - else
+    6:   %p.login= link_to ' Log in with your Facebook account', login_path, :class=>"btn btn-primary"
+  app/views/sessions/_login_form.html.haml:4:in `_app_views_sessions__login_form_html_haml__800231983__623104368'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__623608228'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-25 11:17:53 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:17:53 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+  Rendered sessions/_login_form.html.haml (32.2ms)
+Completed 500 Internal Server Error in 57.6ms
+
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<#<Class:0xb5974dd8>:0xb616b884>):
+    1: #login
+    2: - if @current_user
+    3:   %h4.welcome  Welcome, #{@current_user.name}!
+    4:   = link_to ' Log Out', logout_path, :class=>"btn btn-danger glyphicon glyphicon-minus"
+    5: - else
+    6:   %p.login= link_to ' Log in with your Facebook account', login_path, :class=>"btn btn-primary"
+  app/views/sessions/_login_form.html.haml:4:in `_app_views_sessions__login_form_html_haml__800231983__623104368'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__623608228'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:20:57 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (1.7ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 34.4ms
+
+ActionView::Template::Error (The partial name (movies/) is not a valid Ruby identifier; make sure your partial name starts with a letter or underscore, and is followed by any combinations of letters, numbers, or underscores.):
+    8: 
+    9:   %body
+    10: 
+    11:     = render :partial => 'movies/'
+    12:     = yield
+    13:     -# this goes just inside %body:
+    14:     - if flash[:notice]
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__619905558'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:22:00 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 29.6ms
+
+ActionView::Template::Error (Missing partial /movies with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/home/choocku/Desktop/homeworkSAAS/app/views"
+):
+    8: 
+    9:   %body
+    10: 
+    11:     = render :partial => '/movies'
+    12:     = yield
+    13:     -# this goes just inside %body:
+    14:     - if flash[:notice]
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__623393208'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:22:27 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = 1 LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+  Rendered movies/_movie_form.html.haml (13.0ms)
+Completed 500 Internal Server Error in 99.7ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: -# insert at top of _movie_form.html.haml
+    2: 
+    3: - unless @movie.errors.empty?
+    4:   #warning
+    5:     Errors prevented this movie from being #{controller.action_name}d:
+    6:     %ul
+  app/views/movies/_movie_form.html.haml:3:in `_app_views_movies__movie_form_html_haml___958075787__620231108'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__616805568'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:26:41 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+  Rendered sessions/_login_form.html.haml (50.1ms)
+Completed 500 Internal Server Error in 93.0ms
+
+ActionView::Template::Error (undefined local variable or method `login_path' for #<#<Class:0xb6304fc4>:0xb6303804>):
+    3:   %h4.welcome  Welcome, #{@current_user.name}!
+    4:   = link_to ' Log Out', logout_path, :class=>"btn btn-danger glyphicon glyphicon-minus"
+    5: - else
+    6:   %p.login= link_to ' Log in with your Facebook account', login_path, :class=>"btn btn-primary"
+  app/views/sessions/_login_form.html.haml:6:in `_app_views_sessions__login_form_html_haml__800231983__623104368'
+  app/views/layouts/application.html.haml:11:in `_app_views_layouts_application_html_haml___634353788__619076918'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:27:08 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 45.6ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:09 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:09 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:09 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:09 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-01-25 11:27:17 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/_movie_form.html.haml (28.2ms)
+  Rendered movies/new.html.haml within layouts/application (40.9ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 54.6ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:17 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:17 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:17 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:17 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-01-25 11:27:22 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zapvKtdm9ypWzDwGSOHkcY/qdMJcmzn8iB48g2xDIGs=", "movie"=>{"title"=>"check2", "rating"=>"G", "release_date(1i)"=>"2016", "release_date(2i)"=>"1", "release_date(3i)"=>"25", "description"=>""}, "commit"=>" Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (118.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 25 Jan 2016 04:27:22 UTC +00:00], ["description", ""], ["rating", "G"], ["release_date", Mon, 25 Jan 2016 00:00:00 UTC +00:00], ["title", "Check2"], ["updated_at", Mon, 25 Jan 2016 04:27:22 UTC +00:00]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 147.4ms (ActiveRecord: 134.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:27:22 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+  Rendered sessions/_login_form.html.haml (4.7ms)
+Completed 200 OK in 27.5ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:22 +0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:22 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:22 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:22 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:27:53 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 35.5ms (Views: 20.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:54 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:54 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:54 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:54 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-25 11:27:56 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:27:56 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (6.9ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 21.4ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:57 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:57 +0700
+Served asset /sessions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:57 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:27:57 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-01-25 11:28:01 +0700
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zapvKtdm9ypWzDwGSOHkcY/qdMJcmzn8iB48g2xDIGs=", "search_terms"=>"ddd", "commit"=>"Search TMDb"}
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:28:01 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (6.6ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 20.7ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:01 +0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:01 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:01 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:01 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 11:28:29 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (2.9ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 16.7ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:29 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:29 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:29 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 11:28:29 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-01-25 15:31:53 +0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (85.8ms)
+  Rendered sessions/_login_form.html.haml (2.1ms)
+Completed 200 OK in 528.2ms (Views: 354.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-25 15:31:55 +0700
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-25 15:31:55 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-01-25 15:31:55 +0700
+Served asset /movies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-01-25 15:31:55 +0700
+Served asset /sessions.js - 304 Not Modified (1ms)
