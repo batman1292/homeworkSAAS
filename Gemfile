@@ -5,11 +5,11 @@ gem 'rails', '3.2.18'
 gem 'omniauth-facebook'
 gem 'heroku'
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 gem 'minitest', '~> 4.7.5'
 gem 'themoviedb'
-=======
-gem 'themoviedb'
+#=======
+#gem 'themoviedb'
 
 # add to end of Gemfile
 group :test, :development do
@@ -22,13 +22,13 @@ group :test, :development do
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
 end
->>>>>>> bat-rspace
+#>>>>>>> bat-rspace
 
-group :test do
-  gem 'rspec-rails'
-  gem 'autotest-rails'
-  gem 'ZenTest', '4.8.3'
-end
+#group :test do
+#  gem 'rspec-rails'
+#  gem 'autotest-rails'
+#  gem 'ZenTest', '4.8.3'
+#end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git

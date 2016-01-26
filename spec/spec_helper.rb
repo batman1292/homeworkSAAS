@@ -16,13 +16,13 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-<<<<<<< HEAD
-RSpec.configure do |config|
-=======
+#<<<<<<< HEAD
+#RSpec.configure do |config|
+#=======
 require File.expand_path("../../config/environment", __FILE__)
 RSpec.configure do |config|
   #config.formatter =documentation
->>>>>>> bat-rspace
+#>>>>>>> bat-rspace
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -34,15 +34,15 @@ RSpec.configure do |config|
     #     # => "be bigger than 2 and smaller than 4"
     # ...rather than:
     #     # => "be bigger than 2"
-<<<<<<< HEAD
-    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+#<<<<<<< HEAD
+    #expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-=======
+#=======
     #expectations.include_chain_clauses_in_custom_matcher_descriptions = true
 
-  end
->>>>>>> bat-rspace
+#  end
+#>>>>>>> bat-rspace
   # rspec-mocks config goes here. You can use an alternate test double
   # library (such as bogus or mocha) by changing the `mock_with` option here.
   config.mock_with :rspec do |mocks|
@@ -54,7 +54,7 @@ RSpec.configure do |config|
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
-<<<<<<< HEAD
+#<<<<<<< HEAD
 =begin
 =======
 begin
@@ -117,7 +117,7 @@ begin
   Kernel.srand config.seed
 <<<<<<< HEAD
 =end
-=======
-end
->>>>>>> bat-rspace
+#=======
+#end
+#>>>>>>> bat-rspace
 end
