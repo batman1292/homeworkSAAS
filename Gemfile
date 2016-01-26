@@ -5,6 +5,10 @@ gem 'rails', '3.2.18'
 gem 'omniauth-facebook'
 gem 'heroku'
 
+<<<<<<< HEAD
+gem 'minitest', '~> 4.7.5'
+gem 'themoviedb'
+=======
 gem 'themoviedb'
 
 # add to end of Gemfile
@@ -18,10 +22,12 @@ group :test, :development do
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
 end
+>>>>>>> bat-rspace
 
 group :test do
-  gem "minitest", "4.7.5"
-  gem 'shoulda-matchers'
+  gem 'rspec-rails'
+  gem 'autotest-rails'
+  gem 'ZenTest', '4.8.3'
 end
 
 # Bundle edge Rails instead:
@@ -55,8 +61,14 @@ group :development, :test do
   gem 'debugger'
 end
 
-
-
+# add to end of Gemfile
+group :test, :development do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
+  gem 'database_cleaner' # to clear Cucumber's test database between runs
+  gem 'capybara'         # lets Cucumber pretend to be a web browser
+  gem 'launchy'          # a useful debugging aid for user stories
+end
 
 
 # To use ActiveModel has_secure_password

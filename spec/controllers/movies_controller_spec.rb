@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+require 'spec_helper'
+
+describe MoviesController do
+=======
 require "spec_helper"
 include RSpec
 describe 'MoviesController' do
+>>>>>>> bat-rspace
   describe 'searching TMDb' do
     it 'should call the model method that performs TMDb search'
     it 'should select the Search Results template for rendering'
