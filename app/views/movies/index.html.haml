@@ -1,0 +1,33 @@
+-#  This file is app/views/movies/index.html.haml
+%div.row
+  %div.col-xs-8.col-xs-offset-2
+    %div.row
+      %div.col-xs-4
+        %h1 All Movies
+      %div.col-xs-3.col-xs-offset-5
+        = link_to ' Add new movie', new_movie_path, :class=>"btn btn-success glyphicon glyphicon-plus", :style=>"margin-top:20px"
+    %div.row
+      %div.col-xs-12
+        %table.table-striped.table
+          %thead
+            %tr
+              %th= link_to "Movie Title", order_movie_path("title")
+              %th= link_to "Rating", order_movie_path("rating")
+              %th= link_to "Release Date", order_movie_path("release_date")
+              %th More Info
+          %tbody
+          - @movies.each do |movie|
+            %tr
+              %td= movie.title
+              %td= movie.rating
+              %td= movie.release_date
+              %td= link_to " More about #{movie.title}", movie_path(movie), :class=>"glyphicon glyphicon-pencil"
+
+%h1 Search TMDb for a movie
+
+= form_tag :action => 'search_tmdb' do
+
+  %label{:for => 'search_terms'} Search Terms
+  = text_field_tag 'search_terms'
+  
+  = submit_tag 'Search TMDb'

@@ -1,0 +1,25 @@
+-# insert at top of _movie_form.html.haml
+
+- unless @movie.errors.empty?
+  #warning
+    Errors prevented this movie from being #{controller.action_name}d:
+    %ul
+      - @movie.errors.full_messages.each do |error|
+        %li= error
+%div.row
+  %div.col-xs-3.col-xs-offset-3
+    = label :movie, :title, 'Title'
+  %div.col-xs-6
+    = text_field :movie, 'title'
+%br
+%div.row
+  %div.col-xs-3.col-xs-offset-3
+    = label :movie, :rating, 'Rating'
+  %div.col-xs-6
+    = select :movie, :rating, Movie.all_ratings
+%br
+%div.row
+  %div.col-xs-3.col-xs-offset-3
+    = label :movie, :release_date, 'Released On'
+  %div.col-xs-6
+    = date_select :movie, :release_date

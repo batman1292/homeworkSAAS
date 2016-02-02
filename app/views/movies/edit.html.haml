@@ -1,0 +1,22 @@
+-# edit.html.haml using partial
+%div.row
+  %div.col-xs-8.col-xs-offset-2
+    %div.row
+      %div.col-xs-12
+        %fieldset
+          %legend Edit Existing Movie
+
+          = form_tag movie_path(@movie), :method => :put do
+            = render :partial => 'movie_form'
+            %br
+            %div.row
+              %div.col-xs-3.col-xs-offset-3
+                = label :movie, :description, 'Description'
+              %div.col-xs-6
+                = text_field :movie, 'description'
+            %br
+            %div.row
+              %div.col-xs-3.col-xs-offset-7
+                = submit_tag ' Update Movie Info', :class=>'btn btn-info  glyphicon glyphicon-pencil'
+              %div.col-xs-2
+                = link_to ' Cancel', movie_path(@movie), :class=>'btn btn-danger glyphicon glyphicon-chevron-left'   # cancel link
