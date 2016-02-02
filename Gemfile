@@ -7,13 +7,13 @@ gem 'heroku'
 
 gem 'rcov', '0.9.11'
 gem 'FakeWeb'
-gem 'minitest', '4.7.5'
+# gem 'minitest', '4.7.5'
 #gem 'themoviedb'
 
 # add to end of Gemfile
 group :test, :development do
   gem 'rspec-rails'
-  gem 'ZenTest', '4.11'
+  # gem 'ZenTest', '4.11'
   gem 'autotest-rails'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions

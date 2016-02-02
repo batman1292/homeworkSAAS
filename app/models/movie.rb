@@ -21,5 +21,7 @@ class Movie < ActiveRecord::Base
     self.title = self.title.split(/\s+/).map(&:downcase).
       map(&:capitalize).join(' ')
   end
-
+  # def search_tmdb
+  #   @movies = Movie.find_in_tmdb(params[:search_terms])
+  # end
 end

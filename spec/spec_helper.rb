@@ -19,14 +19,29 @@
 #<<<<<<< HEAD
 #RSpec.configure do |config|
 #=======
+ENV["RAILS_ENV"] ||= 'test'
+
 require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'rails_helper'
+# require 'rspec/autorun'
+
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
 RSpec.configure do |config|
+
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.use_transactional_fixtures = true
+  config.infer_base_class_for_anonymous_controllers = false
+  # config.raise_errors_for_deprecations!
+  config.order = "random"
   #config.formatter =documentation
 #>>>>>>> bat-rspace
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
   config.expect_with :rspec do |expectations|
+
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
     # defined using `chain`, e.g.:
@@ -37,12 +52,6 @@ RSpec.configure do |config|
 #<<<<<<< HEAD
     #expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
-
-#=======
-    #expectations.include_chain_clauses_in_custom_matcher_descriptions = true
-
-#  end
-#>>>>>>> bat-rspace
   # rspec-mocks config goes here. You can use an alternate test double
   # library (such as bogus or mocha) by changing the `mock_with` option here.
   config.mock_with :rspec do |mocks|
@@ -51,6 +60,10 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
+
+  # config.expect_with :rspec do |c|
+  #   c.syntax = :expect
+  # end
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.

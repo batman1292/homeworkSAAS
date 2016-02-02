@@ -111,7 +111,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
-    minitest (4.7.5)
     multi_json (1.11.2)
     multi_test (0.1.2)
     multi_xml (0.5.5)
@@ -217,7 +216,6 @@ PLATFORMS
 
 DEPENDENCIES
   FakeWeb
-  ZenTest (= 4.11)
   autotest-rails
   capybara
   coffee-rails (~> 3.2.1)
@@ -229,7 +227,6 @@ DEPENDENCIES
   heroku
   jquery-rails
   launchy
-  minitest (= 4.7.5)
   omniauth-facebook
   pg
   rails (= 3.2.18)
