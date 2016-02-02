@@ -1,7 +1,3 @@
-<<<<<<< HEAD
---color
---require spec_helper
-=======
+
 --require spec_helper
 --format documentation
->>>>>>> bat-rspace

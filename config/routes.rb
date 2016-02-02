@@ -4,10 +4,10 @@ HomeworkSAAS::Application.routes.draw do
   #add to routes.rb, just before or just after 'resources :movies' :
 
   # Route that posts 'Search TMDb' form
-  post '/movies/search_tmdb'
+  #post '/movies/search_tmdb'
 
   #root :to => redirect('/sessions/logout')
-  
+
   #get 'movies' => 'movies#index'
   get 'movies/new' => 'movies#new'
   get 'movies/:id' => 'movies#show'
