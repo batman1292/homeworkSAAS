@@ -1,11 +1,12 @@
 class MoviesController < ApplicationController
-  def search_tmdb
-    @movies = Movie.find_in_tmdb(params[:search_terms])
-    # hardwire to simulate failure
-    flash[:warning] = "'#{params[:search_terms]}' was not found in TMDb."
-    redirect_to movies_path
-  end
-  
+
+  # def search_tmdb
+  #   Movie.find_in_tmdb(params[:search_terms])
+  #   # hardwire to simulate failure
+  #   # flash[:warning] = "'#{params[:search_terms]}' was not found in TMDb."
+  #   # redirect_to movies_path
+  # end
+
   def index
     @movies = Movie.all
     order = params[:order]
@@ -59,5 +60,20 @@ class MoviesController < ApplicationController
     @movie.destroy
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
+  end
+
+  def search_tmdb
+    title = params[:search_terms]
+    @movies = Movie.find_in_tmdb(title)
+    # if title.nil? or title == ''
+    #   flash[:warning] = 'No title given.'
+    #   redirect_to movies_path and return
+    # elsif Movie.find_by_title(title).present?
+    #   TODO highlight existing movie
+    #   redirect_to movies_path and return
+    # elsif @movies.empty?
+    #   flash[:notice] = "'#{title}' was not found in TMDb."
+    #   redirect_to movies_path and return
+    # end
   end
 end
