@@ -4,9 +4,21 @@ ruby '1.9.3'
 gem 'rails', '3.2.18'
 gem 'omniauth-facebook'
 gem 'heroku'
-
 gem 'minitest', '~> 4.7.5'
 gem 'themoviedb'
+gem 'jquery-rails'
+gem 'haml'
+
+# add to end of Gemfile
+group :test, :development do
+  gem 'sqlite3'
+  gem 'debugger'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
+  gem 'database_cleaner' # to clear Cucumber's test database between runs
+  gem 'capybara'         # lets Cucumber pretend to be a web browser
+  gem 'launchy'          # a useful debugging aid for user stories
+end
 
 group :test do
   gem 'rspec-rails'
@@ -16,10 +28,6 @@ end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git
-
-group :development, :test do
-  gem 'sqlite3'
-end
 group :production do
   gem 'pg'
   gem 'rails_12factor'  # Heroku-specific production settings
@@ -33,25 +41,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
-
-gem 'haml'
-
-group :development, :test do
-  gem 'debugger'
-end
-
-# add to end of Gemfile
-group :test, :development do
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
-  gem 'database_cleaner' # to clear Cucumber's test database between runs
-  gem 'capybara'         # lets Cucumber pretend to be a web browser
-  gem 'launchy'          # a useful debugging aid for user stories
 end
 
 
