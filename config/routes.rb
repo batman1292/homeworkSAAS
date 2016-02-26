@@ -6,9 +6,9 @@ HomeworkSAAS::Application.routes.draw do
   # Route that posts 'Search TMDb' form
   post '/movies/search_tmdb'
 
-  #root :to => redirect('/sessions/logout')
+  root :to => redirect('/sessions/logout')
 
-  get 'movies' => 'movies#index'
+  # get 'movies' => 'movies#index'
   get 'movies/new' => 'movies#new'
   get 'movies/:id' => 'movies#show'
   post 'movies' => 'movies#create'
