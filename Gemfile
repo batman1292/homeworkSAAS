@@ -8,9 +8,11 @@ gem 'minitest', '~> 4.7.5'
 gem 'themoviedb'
 gem 'jquery-rails'
 gem 'haml'
+gem 'factory_girl_rails'
 
 # add to end of Gemfile
 group :test, :development do
+  gem 'simplecov', :require => false
   gem 'sqlite3'
   gem 'debugger'
   gem 'cucumber-rails', :require => false

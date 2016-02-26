@@ -29,13 +29,12 @@ class Movie < ActiveRecord::Base
           raise tmdb_gem_exception
         end
       end
-      # Tmdb.api_key = self.api_key
       # begin
-      # TmdbMovie.find(:title => string)
+      # Tmdb::Movie.find(:title => string)
       # rescue ArgumentError => tmdb_error
       #   raise Movie::InvalidKeyError, tmdb_error.message
-      #below deprecated due to tmdb api update
-      #rescue RuntimeError => tmdb_error
+      # below deprecated due to tmdb api update
+      # rescue RuntimeError => tmdb_error
       #  if tmdb_error =~ /status code '404'/
       #    raise Movie::InvalidKeyError, tmdb_error.message
       #  else
@@ -44,4 +43,6 @@ class Movie < ActiveRecord::Base
       # end
     end
 
+    # def name_with_rating
+    # end
 end
