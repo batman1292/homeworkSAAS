@@ -1,6 +1,6 @@
 HomeworkSAAS::Application.routes.draw do
   resources :movies
-  root :to => redirect('/movies')
+  # root :to => redirect('/movies')
   #add to routes.rb, just before or just after 'resources :movies' :
 
   # Route that posts 'Search TMDb' form
