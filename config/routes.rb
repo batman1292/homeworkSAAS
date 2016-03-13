@@ -6,7 +6,7 @@ HomeworkSAAS::Application.routes.draw do
   # Route that posts 'Search TMDb' form
   post '/movies/search_tmdb'
 
-  # root :to => redirect('/sessions/logout')
+  root :to => redirect('/sessions/logout')
 
   # get 'movies' => 'movies#index'
   get 'movies/new' => 'movies#new'
@@ -19,7 +19,7 @@ HomeworkSAAS::Application.routes.draw do
   get 'movies/:order/order' => 'movies#index', :as => 'order_movie'
 
   get 'auth/facebook', :as => 'login'
-  # get 'sessions/logout' => 'sessions#logout', :as => 'logout'
+  get 'sessions/logout' => 'sessions#logout', :as => 'logout'
   match  'auth/:provider/callback' => 'sessions#create'
   match 'logout' => 'sessions#destroy'
   match  'auth/failure' => 'sessions#failure'
