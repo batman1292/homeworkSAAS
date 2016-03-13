@@ -1,17 +1,17 @@
 HomeworkSAAS::Application.routes.draw do
   resources :movies
-  # root :to => redirect('/movies')
+  root :to => redirect('/movies')
   #add to routes.rb, just before or just after 'resources :movies' :
 
   # Route that posts 'Search TMDb' form
   post '/movies/search_tmdb'
 
-  root :to => redirect('/sessions/logout')
+  # root :to => redirect('/sessions/logout')
 
   # get 'movies' => 'movies#index'
   get 'movies/new' => 'movies#new'
-  get 'movies/:id' => 'movies#show'
   post 'movies' => 'movies#create'
+  get 'movies/:id' => 'movies#show'
   put 'movies/:id' => 'movies#update'
   get 'movies/:id/edit' => 'movies#edit'
   delete 'movies/:id' => 'movies#destroy'
@@ -19,7 +19,7 @@ HomeworkSAAS::Application.routes.draw do
   get 'movies/:order/order' => 'movies#index', :as => 'order_movie'
 
   get 'auth/facebook', :as => 'login'
-  get 'sessions/logout' => 'sessions#logout', :as => 'logout'
+  # get 'sessions/logout' => 'sessions#logout', :as => 'logout'
   match  'auth/:provider/callback' => 'sessions#create'
   match 'logout' => 'sessions#destroy'
   match  'auth/failure' => 'sessions#failure'

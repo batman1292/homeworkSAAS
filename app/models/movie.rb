@@ -19,28 +19,29 @@ class Movie < ActiveRecord::Base
         map(&:capitalize).join(' ')
     end
 
+    # def self.api_key
+    #   "c7f087df859a16ff461c1eb351d13049"
+    # end
+
     def self.find_in_tmdb(string)
       begin
-        Tmdb::Movie.find(string)
-      rescue NoMethodError => tmdb_gem_exception
-        if Tmdb::Api.response['code'] == '401'
-          raise Movie::InvalidKeyError, 'Invalid API key'
-        else
-          raise tmdb_gem_exception
-        end
-      end
-      # begin
-      # Tmdb::Movie.find(:title => string)
-      # rescue ArgumentError => tmdb_error
-      #   raise Movie::InvalidKeyError, tmdb_error.message
+      Tmdb::Movie.find(string)
+      rescue ArgumentError => tmdb_error
+        raise Movie::InvalidKeyError, tmdb_error.message
       # below deprecated due to tmdb api update
-      # rescue RuntimeError => tmdb_error
-      #  if tmdb_error =~ /status code '404'/
-      #    raise Movie::InvalidKeyError, tmdb_error.message
-      #  else
-      #    raise RuntimeError, tmdb_error.message
-      #  end
-      # end
+      rescue RuntimeError => tmdb_error
+       if tmdb_error =~ /status code '404'/
+         raise Movie::InvalidKeyError, tmdb_error.message
+       else
+         raise RuntimeError, tmdb_error.message
+       end
+      rescue NoMethodError => tmdb_gem_exception
+       if Tmdb::Api.response['code'] == '401'
+         raise Movie::InvalidKeyError, 'Invalid API key'
+       else
+         raise tmdb_gem_exception
+       end
+      end
     end
 
     # def name_with_rating

@@ -45440,3 +45440,428 @@ Migrating to CreateMovies (20151117082907)
 Migrating to CreateMoviegoers (20151119073232)
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  [1m[35mMoviegoer Load (5.9ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+Redirected to http://test.host/auth/facebook
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 24.0ms (ActiveRecord: 6.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/auth/facebook
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1.8ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  [1m[35mMoviegoer Load (0.2ms)[0m  SELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1
+Redirected to http://test.host/auth/facebook
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1.5ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-08 11:16:04 +0700
+Connecting to database specified by database.yml
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-08 11:16:06 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/auth/facebook
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 295.0ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-03-08 11:16:06 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-08 11:29:49 +0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (112.4ms)
+  Rendered sessions/_login_form.html.haml (8.6ms)
+Completed 200 OK in 577.7ms (Views: 387.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-08 11:29:51 +0700
+Served asset /jquery.js - 304 Not Modified (65ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-08 11:29:51 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-08 11:29:51 +0700
+Served asset /movies.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-08 11:29:51 +0700
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-03-08 11:29:58 +0700
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3m+kSYBiFgFChvd6Ejxxp+3qtNqFh7ReKGmqwJEvtSQ=", "search_terms"=>"man of steel", "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (133.0ms)
+  Rendered sessions/_login_form.html.haml (0.4ms)
+Completed 200 OK in 7958.5ms (Views: 151.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-08 11:30:06 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-08 11:30:06 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-08 11:30:06 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-08 11:30:06 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-08 11:41:06 +0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (88.2ms)
+  Rendered sessions/_login_form.html.haml (12.7ms)
+Completed 200 OK in 419.2ms (Views: 229.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-08 11:41:08 +0700
+Served asset /jquery.js - 304 Not Modified (74ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-08 11:41:08 +0700
+Served asset /sessions.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-08 11:41:08 +0700
+Served asset /movies.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-08 11:41:08 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-03-08 11:41:11 +0700
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3m+kSYBiFgFChvd6Ejxxp+3qtNqFh7ReKGmqwJEvtSQ=", "search_terms"=>"man of steel", "commit"=>"Search TMDb"}
+Completed 500 Internal Server Error in 0.7ms
+
+NoMethodError (undefined method `response' for Tmdb::Api:Class):
+  app/models/movie.rb:27:in `rescue in find_in_tmdb'
+  app/models/movie.rb:24:in `find_in_tmdb'
+  app/controllers/movies_controller.rb:59:in `search_tmdb'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-03-08 11:45:03 +0700
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3m+kSYBiFgFChvd6Ejxxp+3qtNqFh7ReKGmqwJEvtSQ=", "search_terms"=>"man of steel", "commit"=>"Search TMDb"}
+Completed 500 Internal Server Error in 0.4ms
+
+NoMethodError (undefined method `response' for Tmdb::Api:Class):
+  app/models/movie.rb:27:in `rescue in find_in_tmdb'
+  app/models/movie.rb:24:in `find_in_tmdb'
+  app/controllers/movies_controller.rb:59:in `search_tmdb'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.2ms)
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-03-08 22:23:35 +0700
+Connecting to database specified by database.yml
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3m+kSYBiFgFChvd6Ejxxp+3qtNqFh7ReKGmqwJEvtSQ=", "search_terms"=>"man of steel", "commit"=>"Search TMDb"}
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 1070.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-08 22:23:39 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (32.1ms)
+  Rendered sessions/_login_form.html.haml (7.0ms)
+Completed 200 OK in 522.3ms (Views: 300.7ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:40 +0700
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:40 +0700
+Served asset /movies.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:40 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:40 +0700
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-08 22:23:49 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (10.4ms)
+  Rendered sessions/_login_form.html.haml (0.3ms)
+Completed 200 OK in 22.5ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:49 +0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:49 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:49 +0700
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:49 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-03-08 22:23:54 +0700
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3m+kSYBiFgFChvd6Ejxxp+3qtNqFh7ReKGmqwJEvtSQ=", "search_terms"=>"man", "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (88.4ms)
+  Rendered sessions/_login_form.html.haml (0.4ms)
+Completed 200 OK in 2357.6ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:57 +0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:57 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:57 +0700
+Served asset /movies.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-08 22:23:57 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 45.8ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 11.2ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 45.8ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.1ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.0ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 56.2ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 6.5ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 3.9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 46.9ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.1ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 13.8ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 46.1ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.1ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 9.1ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 48.2ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 11.4ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Load (24.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "Inception"]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 65.5ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.1ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 10.2ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+
+
+Started POST "/movies/search_tmdb" for 127.0.0.1 at 2016-03-09 00:35:09 +0700
+Connecting to database specified by database.yml
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3m+kSYBiFgFChvd6Ejxxp+3qtNqFh7ReKGmqwJEvtSQ=", "search_terms"=>"man", "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (146.3ms)
+  Rendered sessions/_login_form.html.haml (4.7ms)
+Completed 200 OK in 1917.5ms (Views: 396.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-09 00:35:14 +0700
+Served asset /jquery.js - 304 Not Modified (84ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-09 00:35:14 +0700
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-09 00:35:14 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-03-09 00:35:14 +0700
+Served asset /movies.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 47.3ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 2.9ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"search_terms"=>"hardware"}
+Completed 200 OK in 8.1ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
